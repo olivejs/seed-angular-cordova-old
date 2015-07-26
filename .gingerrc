@@ -3,5 +3,18 @@
     "src": "src",
     "tmp": ".tmp",
     "dist": "www"
+  },
+  "content-security-policy": {
+    "development": {
+      "default-src": "'unsafe-inline' 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'",
+      "connect-src": "http://localhost:3000 ws://localhost:3000",
+      "style-src": "'self' 'unsafe-inline'",
+      "media-src": "*"
+    },
+    "production": {
+      "default-src": "'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'",
+      "style-src": "'self' 'unsafe-inline'",
+      "media-src": "*"
+    }
   }
 }

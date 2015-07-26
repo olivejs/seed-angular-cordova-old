@@ -2,6 +2,6 @@
   "paths": {
     "src": "src",
     "tmp": ".tmp",
-    "dist": "dist"
+    "dist": "www"
   }
 }

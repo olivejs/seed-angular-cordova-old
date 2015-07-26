@@ -1,8 +1,8 @@
 {
-  "name": "seed-angular",
+  "name": "seed-angular-cordova",
   "version": "0.0.1",
   "description": "Ginger seed for AngularJS",
-  "repository": "gingerjs/seed-angular",
+  "repository": "gingerjs/seed-angular-cordova",
   "keywords": [
     "ginger-seed",
     "scaffold",

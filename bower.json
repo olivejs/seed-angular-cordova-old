@@ -1,5 +1,5 @@
 {
-  "name": "seed-angular",
+  "name": "seed-angular-cordova",
   "version": "0.0.1",
   "dependencies": {
     "angular": "~1.4.1",

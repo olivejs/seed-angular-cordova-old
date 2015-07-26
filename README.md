@@ -16,7 +16,25 @@ Install npm and bower dependencies:
 ```
   npm install && bower install
 ```
-Run `gulp build` to build and `gulp serve` for preview. Run `gulp test` to launch the test runner. It will also generates the code coverage report in `coverage` directory.
+Run `gulp serve` for preview. Run `gulp test` to launch the test runner. It will also generates the code coverage report in `coverage` directory.
+
+Before you can build the project, you need to specify a set of target platforms:
+```
+cordova platform add ios
+cordova platform add android
+```
+To start building, first build the web files (in `www` directory):
+```
+gulp build
+```
+Then build for the device platforms:
+```
+cordova build
+```
+Or, you can combine both:
+```
+gulp build && cordova build
+```
 
 ## Directory Structure
 
@@ -46,7 +64,7 @@ Run `gulp build` to build and `gulp serve` for preview. Run `gulp test` to launc
 │ │ ├─apple-touch-icon.png
 │ │ └─favicon.ico
 │ └─index.html
-├─dist/
+├─www/
 ├─.tmp/
 ├─bower_components/
 ├─node_modules/
@@ -63,7 +81,7 @@ Run `gulp build` to build and `gulp serve` for preview. Run `gulp test` to launc
 File/Directory    | Purpose
 ------------------|---------
 src/              | Contains your Angular application code.
-dist/             | Contains the distributable (that is, optimized and self-contained) output of your application. Deploy this to your server!
+www/              | Contains the distributable (that is, optimized and self-contained) output of your application. Deploy this to your server!
 .tmp/             | Various temporary output of build steps, as well as the debug output of your application.
 bower_components/ |	Bower dependencies.
 node_modules      | Node modules required for development purpose.
